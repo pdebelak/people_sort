@@ -1,4 +1,4 @@
-.PHONY: test setup
+.PHONY: test deps server
 
 test:
 	venv/bin/python -m pytest --cov=people_sort tests/
