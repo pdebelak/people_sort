@@ -51,3 +51,12 @@ class Person:
             return date(int(year), int(month), int(day))
         except (ValueError, AttributeError):
             raise InvalidDate
+
+    def to_dict(self):
+        return dict(
+            last_name=self.last_name,
+            first_name=self.first_name,
+            gender=self.gender,
+            favorite_color=self.favorite_color,
+            birth_date=self.birth_date.strftime('%-m/%-d/%Y'),
+        )
