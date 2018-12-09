@@ -20,7 +20,7 @@ def test_404():
 def test_adding_person():
     client = app.test_client()
     resp = client.post('/records', data='Debelak|Peter|M|Orange|1/1/2018')
-    assert resp.status_code == 204
+    assert resp.status_code == 201
     person = people._people[0]
     assert person.last_name == 'Debelak'
 

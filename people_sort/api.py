@@ -16,7 +16,7 @@ def add_person():
     as accepted by parse_record"""
     body = request.get_data(as_text=True)
     people.add_person(parse_record(body))
-    return Response(None, mimetype='application/json', status=204)
+    return Response(None, mimetype='application/json', status=201)
 
 
 @app.route('/records/gender', methods=['GET'])
